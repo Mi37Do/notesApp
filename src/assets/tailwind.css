@@ -1,0 +1,298 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+/**/
+
+:root {
+  --vt-c-white: #ffffff;
+  --vt-c-white-deep: #ffffff;
+
+  --vt-c-black: #1d152d;
+
+  --vt-c-text-slate: #334155;
+  --vt-c-text-slate-light: #f5f5f5;
+
+  --vt-c-app-background-light: #f6fbff;
+  --vt-c-app-background-dark: #313338;
+
+  --vt-c-app-outline-light: #e2e8f0;
+  --vt-c-app-outline-dark: #3f4147;
+
+  --vt-c-nav-text-light: #577399;
+  --vt-c-nav-text-dark: #e0e7ff;
+
+  --vt-c-nav-text-hover-light: #6366f1;
+  --vt-c-nav-text-hover-dark: #e0e7ff;
+
+  --vt-c-deep-background-light: #fff;
+  --vt-c-deep-background-dark: #2b2d31;
+
+  --vt-c-flaot-btn-light: #fff;
+  --vt-c-flaot-btn-dark: #2313338;
+
+  --vt-c-input-light: #fff;
+  --vt-c-input-dark: #383a40;
+
+  --vt-c-flaot-btn-hover-light: #fff;
+  --vt-c-flaot-btn-hover-dark: #2b2d31;
+
+  --vt-c-text-dark: #fff;
+  --vt-c-text-light: #383a40;
+}
+
+/* semantic color variables for this project */
+
+/**/
+:root {
+  --color-background: var(--vt-c-app-background-light);
+  --color-background-deep: var(--vt-c-deep-background-light);
+
+  --color-outline: var(--vt-c-app-outline-light);
+
+  --color-nav-text: var(--vt-c-nav-text-light);
+  --color-nav-text-hover: var(--vt-c-nav-text-hover-light);
+
+  --color-btn-float: var(--vt-c-flaot-btn-light);
+  --color-btn-float-hover: var(--vt-c-flaot-btn-hover-light);
+
+  --color-input: var(--vt-c-input-light);
+
+  --color-border: var(--vt-c-divider-light-2);
+  --color-border-hover: var(--vt-c-divider-light-1);
+
+  --color-text: var(--vt-c-text-ligth);
+}
+
+:root.dark-theme {
+  --color-background: var(--vt-c-app-background-dark);
+  --color-background-deep: var(--vt-c-deep-background-dark);
+
+  --color-nav-text: var(--vt-c-nav-text-dark);
+  --color-nav-text-hover: var(--vt-c-nav-text-hover-dark);
+
+  --color-outline: var(--vt-c-app-outline-dark);
+
+  --color-btn-float: var(--vt-c-flaot-btn-dark);
+  --color-btn-float-hover: var(--vt-c-flaot-btn-hover-dark);
+
+  --color-input: var(--vt-c-input-dark);
+
+  --color-border: var(--vt-c-divider-dark-2);
+  --color-border-hover: var(--vt-c-divider-dark-1);
+
+  --color-text: var(--vt-c-text-dark);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'libre';
+  src: url('@/assets/fonts/LibreFranklin-VariableFont_wght.ttf');
+}
+
+body {
+  font-family: libre;
+  font-size: 0.88rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+  color: var(--color-text);
+  background: var(--color-background);
+  transition:
+    color 0.5s,
+    background-color 0.5s;
+}
+
+.pixa-border {
+  border-color: var(--color-outline);
+  transition:
+    color 0.5s,
+    border-color 0.5s;
+}
+
+/*css*/
+
+.sideMenu {
+  color: var(--color-text);
+  background-color: var(--color-background-deep);
+  border-radius: 0.8rem;
+  transition:
+    color 0.5s,
+    background-color 0.5s;
+}
+
+.topMenu {
+  color: var(--color-text);
+  background-color: #283444;
+  border-radius: 0.8rem;
+  transition:
+    color 0.5s,
+    background-color 0.5s;
+}
+
+.nav-menu,
+.nav-element {
+  color: var(--color-nav-text);
+  fill: var(--color-nav-text);
+  background-color: transparent;
+  border: 0px;
+}
+
+.nav-element:hover {
+  color: var(--color-nav-text-hover);
+  fill: var(--color-nav-text-hover);
+  background-color: rgba(99, 102, 241, 0.1);
+}
+
+.btn {
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1.15rem;
+}
+
+.btn-primary {
+  color: #fff;
+  fill: #fff;
+  box-shadow: 0 25px 50px -12px rgba(99, 102, 241, 0.4);
+}
+
+.btn-sm {
+  border-radius: 0.45rem;
+}
+
+.btn-ghost:hover {
+  background-color: rgba(99, 102, 241, 0.1);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  width: 0px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-color: white;
+  border-width: 20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #cbd5e1;
+}
+
+.btn-disabled {
+  color: white;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+/* pixaviz */
+.pixa-card {
+  background-color: var(--color-background-deep);
+  border-width: 1px;
+  border-color: var(--color-outline);
+  border-radius: 0.6rem;
+}
+
+.pixa-card-float {
+  background-color: var(--color-background-deep);
+  border-width: 1px;
+  border-color: var(--color-outline);
+  border-radius: 0.9rem;
+  box-shadow: 0 25px 50px -12px rgba(99, 102, 241, 0.2);
+}
+
+.pixa-title {
+  font-size: large;
+  font-weight: 700;
+  color: var(--color-nav-text-hover);
+}
+
+.pixa-text-tag {
+  font-size: 0.86rem;
+}
+
+.pixa-input {
+  display: block;
+  border-width: 1px;
+  height: 2.5rem;
+  border-radius: 0.6rem;
+  outline-width: 0px;
+  font-size: small;
+  border-color: var(--color-outline);
+  background-color: var(--color-input);
+  box-shadow: 0 25px 50px -12px rgba(99, 102, 241, 0.2);
+  transition:
+    color 0.5s,
+    background-color border-color 0.5s;
+}
+
+.pixa-input:focus {
+  display: block;
+  border-width: 1px;
+  border-color: #6366f1;
+  box-shadow: 0 25px 50px -12px rgba(99, 102, 241, 0.2);
+}
+
+.pixa-btn-float {
+  background-color: var(--color-btn-float);
+  border-width: 1px;
+  fill: var(--color-nav-text);
+  border-color: var(--color-outline);
+  box-shadow: 0 25px 50px -12px rgba(99, 102, 241, 0.4);
+}
+
+.pixa-btn-float:hover {
+  background-color: var(--color-btn-float-hover);
+  fill: var(--color-nav-text-hover);
+  border-width: 1px;
+  border-color: var(--color-nav-text-hover);
+}
+
+.pixa-btn {
+  height: 2.5rem;
+  border-radius: 0.4rem;
+}
+
+.pixa-top-btn {
+  color: white;
+  border-width: 0px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.pixa-top-btn:hover {
+  background: rgba(0, 0, 0, 0.4);
+}
